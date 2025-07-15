@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FGNA – Federal Gang & Narcotics Agency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+      color: #111;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 70px;
+    }
+    header h1 {
+      font-size: 26px;
+      margin: 0;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      padding: 12px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+      overflow: hidden;
+    }
+    .mySlides {
+      display: none;
+      width: 100%;
+      height: 500px;
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .slide-caption {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 24px;
+    }
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      flex: 1;
+      min-width: 250px;
+      background: #f7f7f7;
+      border-left: 5px solid #222;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+      color: #000;
+    }
+    footer {
+      background: #000;
+      color: #bbb;
+      text-align: center;
+      padding: 25px 0;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="display: flex; align-items: center;">
+    <img src="FGNA-logo.jpeg" alt="FGNA Logo" />
+    <h1 style="margin-left: 20px;">Federal Gang & Narcotics Agency</h1>
+  </div>
+</header>
+
+<nav>
+  <a href="javascript:void(0)" onclick="showSpecificSlide(1)">Home</a>
+  <a href="javascript:void(0)" onclick="showSpecificSlide(2)">Divisions</a>
+  <a href="javascript:void(0)" onclick="showSpecificSlide(3)">Documents</a>
+  <a href="javascript:void(0)" onclick="showSpecificSlide(4)">Chain of Command</a>
+</nav>
+
+<div class="slideshow-container">
+  <!-- Slide 1: Home -->
+  <div class="mySlides" style="background-image: url('slide1.jpg');">
+    <div class="slide-caption">Welcome to FGNA – Elite Federal Response Team</div>
+  </div>
+
+  <!-- Slide 2: Subdivisions -->
+  <div class="mySlides" style="background-color: #333; color: white; padding: 50px;">
+    <h2>Operational Divisions</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Narcotics Enforcement</h3>
+        <p>Undercover operations, drug seizures, and cartel takedowns.</p>
+      </div>
+      <div class="card">
+        <h3>Gang Task Force</h3>
+        <p>Surveillance and neutralization of criminal gangs.</p>
+      </div>
+      <div class="card">
+        <h3>Tactical Ops Unit</h3>
+        <p>High-risk raids and rapid response missions.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3: Documents -->
+  <div class="mySlides" style="background-color: #222; color: white; padding: 50px;">
+    <h2>Documents & Resources</h2>
+    <ul>
+      <li><a href="FGNA_SOP_2025.pdf" target="_blank" style="color: #00f;">📝 SOP Document</a></li>
+      <li><a href="FGNA_Field_Manual.pdf" target="_blank" style="color: #00f;">📘 Field Manual</a></li>
+      <li><a href="FGNA_Join_Application.pdf" target="_blank" style="color: #00f;">📄 Application Form</a></li>
+    </ul>
+  </div>
+
+  <!-- Slide 4: Chain of Command -->
+  <div class="mySlides" style="background-color: #111; color: white; padding: 50px;">
+    <h2>Chain of Command</h2>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Director: Alexander Knox</h3>
+        <p>Strategic operations lead and agency commander.</p>
+      </div>
+      <div class="card">
+        <h3>Deputy Director: Tania Rivers</h3>
+        <p>Division oversight and tactical leadership.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Federal Gang & Narcotics Agency (FGNA). All rights reserved.
+</footer>
+
+<script>
+  let slideIndex = 0;
+  showSlides();
+  let autoSlide = true;
+
+  function showSlides() {
+    if (!autoSlide) return;
+    const slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 4000); // Change slide every 4 seconds
+  }
+
+  function showSpecificSlide(n) {
+    autoSlide = false;
+    const slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex = n;
+    slides[slideIndex - 1].style.display = "block";
+  }
+</script>
+
+</body>
+</html>
