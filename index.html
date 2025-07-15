@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FGNA – Federal Gang & Narcotics Agency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f2f2f2;
+      color: #111;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 70px;
+    }
+    header h1 {
+      font-size: 26px;
+      margin: 0;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      padding: 12px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.7)), url('banner.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h2 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: auto;
+    }
+    section {
+      padding: 50px 40px;
+      background: white;
+      max-width: 1200px;
+      margin: 30px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    section h2 {
+      font-size: 30px;
+      margin-bottom: 30px;
+      border-bottom: 3px solid #111;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .card {
+      flex: 1;
+      min-width: 250px;
+      background: #f7f7f7;
+      border-left: 5px solid #222;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    .dept-pic {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    footer {
+      background: #000;
+      color: #bbb;
+      text-align: center;
+      padding: 25px 0;
+      font-size: 14px;
+      margin-top: 50px;
+    }
+    a.document-link {
+      text-decoration: none;
+      color: #0056a3;
+      font-weight: bold;
+    }
+    @media(max-width: 768px) {
+      header, nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div style="display: flex; align-items: center;">
+    <img src="FGNA-logo.jpeg" alt="FGNA Logo" />
+    <h1 style="margin-left: 20px;">Federal Gang & Narcotics Agency</h1>
+  </div>
+</header>
+<nav>
+  <a href="#about">About</a>
+  <a href="#subdivisions">Divisions</a>
+  <a href="#coc">Command</a>
+  <a href="#documents">Documents</a>
+</nav>
+<div class="hero">
+  <h2>FGNA – Elite Federal Response</h2>
+  <p>Combating Gang Violence & Narcotics Trafficking Nationwide</p>
+</div>
+<section id="about">
+  <h2>About FGNA</h2>
+  <p>
+    The Federal Gang & Narcotics Agency (FGNA) is a specialized federal division under the Department of State, tasked with neutralizing high-risk gang operations and dismantling narcotics networks across the United States. Our tactical, intelligence, and operations teams are trained to respond with precision, strength, and discretion.
+  </p>
+  <img src="dept-photo.jpg" class="dept-pic" alt="FGNA Team Photo">
+</section>
+<section id="subdivisions">
+  <h2>Operational Divisions</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Narcotics Enforcement Division</h3>
+      <p>Conducts undercover operations, seizures, and arrests tied to major drug trafficking organizations.</p>
+    </div>
+    <div class="card">
+      <h3>Gang Task Force</h3>
+      <p>Surveils, tracks, and dismantles criminal gangs across urban and rural zones.</p>
+    </div>
+    <div class="card">
+      <h3>Tactical Operations Unit</h3>
+      <p>Leads high-risk raids, hostage rescue, and counter-gang warfare under S.E.R.T protocol.</p>
+    </div>
+    <div class="card">
+      <h3>Cyber & Intelligence Bureau</h3>
+      <p>Intercepts communications, analyzes data, and provides real-time surveillance intel.</p>
+    </div>
+  </div>
+</section>
+<section id="coc">
+  <h2>Chain of Command</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Director: Alexander Knox</h3>
+      <p>Commander of FGNA and strategic operations lead.</p>
+    </div>
+    <div class="card">
+      <h3>Deputy Director: Tania Rivers</h3>
+      <p>Oversees coordination between divisions and tactical leadership.</p>
+    </div>
+    <div class="card">
+      <h3>Chief of Field Ops: Marcus Reyes</h3>
+      <p>Coordinates ground-level SWAT and tactical strike teams nationwide.</p>
+    </div>
+  </div>
+</section>
+<section id="documents">
+  <h2>Documents & Resources</h2>
+  <ul>
+    <li><a class="document-link" href="FGNA_SOP_2025.pdf" target="_blank">📝 Standard Operating Procedures (SOP)</a></li>
+    <li><a class="document-link" href="FGNA_Field_Manual.pdf" target="_blank">📘 Field Operations Manual</a></li>
+    <li><a class="document-link" href="FGNA_Join_Application.pdf" target="_blank">📄 Join FGNA – Application Form</a></li>
+  </ul>
+</section>
+<footer>
+  &copy; 2025 Federal Gang & Narcotics Agency (FGNA). All rights reserved. Department of State.
+</footer>
+</body>
+</html>
